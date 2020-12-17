@@ -42,7 +42,7 @@ namespace PusherClient
 
                 HttpContent content = new FormUrlEncodedContent(data);
 
-                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(_AuthorizationHeader);
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _AuthorizationHeader);
 
                 var response = httpClient.PostAsync(_authEndpoint, content).Result;
                 authToken = response.Content.ReadAsStringAsync().Result;
