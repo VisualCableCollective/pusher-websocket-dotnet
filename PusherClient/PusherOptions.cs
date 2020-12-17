@@ -20,6 +20,6 @@
         /// </summary>
         public string Cluster { get; set; } = "mt1";
 
-        internal string Host => $"ws-{Cluster}.pusher.com";
+        public string Host { get; set; } = "";
     }
 }
