@@ -27,7 +27,7 @@ namespace PusherClient.Tests.UnitTests
                         .WithBody(FakeTokenAuth)
                 );
 
-            var testHttpAuthorizer = new PusherClient.HttpAuthorizer(hostUrl + "/authz");
+            var testHttpAuthorizer = new PusherClient.HttpAuthorizer(hostUrl + "/authz", "");
             var AuthToken = testHttpAuthorizer.Authorize("private-test", "fsfsdfsgsfs");
 
             Assert.AreNotEqual("System.Net.Http.StreamContent", AuthToken);

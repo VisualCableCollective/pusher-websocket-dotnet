@@ -21,5 +21,7 @@
         public string Cluster { get; set; } = "mt1";
 
         public string Host { get; set; } = "";
+
+        public string AuthenticationHeader { get; set; } = "";
     }
 }

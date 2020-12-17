@@ -59,7 +59,7 @@ namespace ExampleApplication
         {
             _pusher = new Pusher(Config.AppKey, new PusherOptions
             {
-                Authorizer = new HttpAuthorizer("http://localhost:8888/auth/" + HttpUtility.UrlEncode(_name))
+                Authorizer = new HttpAuthorizer("http://localhost:8888/auth/" + HttpUtility.UrlEncode(_name), "")
             });
             _pusher.ConnectionStateChanged += _pusher_ConnectionStateChanged;
             _pusher.Error += _pusher_Error;
